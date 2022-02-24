@@ -7,7 +7,7 @@ export class FetcherInMemory<T> implements Fetcher<T> {
     this.container = new Map();
   }
   get(id: string): Entity<T> {
-    throw new Error("Method not implemented.");
+    return this.container.get(id);
   }
   save(entity: Entity<T>): Entity<T> {
     this.container.set(entity.getId(), entity);
