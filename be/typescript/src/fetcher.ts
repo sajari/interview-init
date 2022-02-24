@@ -1,9 +1,9 @@
-import { Entity } from "./entity";
+import Entity from "./entity";
 
 /**
  * A Fetcher that can get, list, save and clear an Entity
  */
-export interface Fetcher<T> {
+export default interface Fetcher<T> {
   /**
    * Return an Entity based on the passed in id
    * @param id

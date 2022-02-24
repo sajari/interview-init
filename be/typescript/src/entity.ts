@@ -1,4 +1,4 @@
-export interface Entity<T> {
+export default interface Entity<T> {
   getId(): string;
   get(): T;
 }

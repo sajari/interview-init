@@ -1,7 +1,7 @@
-import { Entity } from "./entity";
-import { Fetcher } from "./fetcher";
+import Entity from "./entity";
+import Fetcher from "./fetcher";
 
-export class FetcherInMemory<T> implements Fetcher<T> {
+export default class FetcherInMemory<T> implements Fetcher<T> {
   container: Map<string, Entity<T>>;
   constructor() {
     this.container = new Map();

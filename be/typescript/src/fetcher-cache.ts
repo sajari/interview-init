@@ -1,2 +1,2 @@
-export class FetcherCache {
+export default class FetcherCache {
 }
