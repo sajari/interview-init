@@ -1,5 +1,5 @@
 {
-  "name": "interview-init-vanilla",
+  "name": "interview-init-fe-vanilla",
   "version": "1.0.0",
   "description": "Starting place for Sajari FE interview.",
   "main": "index.js",
