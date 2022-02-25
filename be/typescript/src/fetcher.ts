@@ -9,7 +9,7 @@ export default interface Fetcher<T> {
    * @param id
    * @return the entity or null
    */
-  get(id: string): Entity<T>;
+  get(id: string): Promise<Entity<T> | undefined>;
 
   /**
    * Saves an entity via the Fetcher
@@ -19,13 +19,7 @@ export default interface Fetcher<T> {
   save(entity: Entity<T>): Entity<T>;
 
   /**
-   * Will return a Collection of Entities
-   * @return an array of entities, or an empty array
-   */
-  list(): Entity<T>[];
-
-  /**
    * Will clear all entities in the Fetcher
    */
-  clear();
+  clear(): void;
 }
