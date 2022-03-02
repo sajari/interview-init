@@ -20,9 +20,7 @@ class TestEntity<T> implements Entity<T> {
 const e1 = new TestEntity("first", "testing");
 const e2 = new TestEntity("second", "this");
 const e3 = new TestEntity("third", "works");
-const wrapped = new FetcherBlackBox<string>();
-// Depends on how one constructs a cached fetcher...
-// const fetcher = new FetcherCache<string>();
+const fetcher = new FetcherCache<string>();
 describe("test FetcherCache", () => {
   beforeEach(() => {
     fetcher.save(e1);

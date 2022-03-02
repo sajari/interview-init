@@ -44,13 +44,15 @@ import Fetcher from "./fetcher";
  *
  *
  *
+ * 
+ * 
  *
  *
  *
  *
  */
 
-const arbitraryDelay = 10;
+const arbitraryDelay = 5;
 export default class FetcherBlackBox<T> implements Fetcher<T> {
   container: Map<string, Entity<T>>;
   withDelay: boolean;

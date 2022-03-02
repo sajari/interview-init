@@ -18,12 +18,12 @@ class TestEntity<T> implements Entity<T> {
   }
 }
 const lUncachedFetcher = new FetcherBlackBox<string>();
-const lCachedFetcher = new FetcherCache<string>();
+//const lCachedFetcher = new FetcherCache<string>();
 
 const uncachedFetcher = new FetcherBlackBox<string>(false);
-const cachedFetcher = new FetcherCache<string>();
+//const cachedFetcher = new FetcherCache<string>();
 
-const size = 1000;
+const size = 500;
 const identifierExtra =
   Math.random().toString(36).substring(2, 15) +
   Math.random().toString(36).substring(2, 15);
@@ -61,12 +61,12 @@ async function testFetcher(name: string, fetcher: Fetcher<string>) {
 
 console.log(process.pid);
 console.log("With latency on fetch:");
-testFetcher("Lcached", lCachedFetcher)
-  .then(() => testFetcher("Luncached", lUncachedFetcher))
-  .then(() => {
-    console.log("-------", "Without latency on fetch:");
-    return testFetcher("cached", cachedFetcher);
-  })
+testFetcher("Luncached", lUncachedFetcher)
+  // .then(() => testFetcher("Lcached", lCachedFetcher))
+  // .then(() => {
+  //   console.log("-------", "Without latency on fetch:");
+  //   return testFetcher("cached", cachedFetcher);
+  // })
   .then(() => testFetcher("uncached", uncachedFetcher));
 
 console.log("Started Timing...");
