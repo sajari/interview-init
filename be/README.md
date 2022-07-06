@@ -12,7 +12,7 @@ We want you to implement a cache, we will first start simple and then add some s
 The code already has two high level interfaces `Fetcher` and `Entity`, a basic in-memory implementation
 of a `Fetcher`, `FetcherInMemory` and an unimplemented `FetcherCache`.
 
-Have a look through these classes and the current tests
+Have a look through these classes and the current tests.
 
 ## Building
 
@@ -23,6 +23,6 @@ This project uses Gradle, if you are not familar with this build tool, do not wo
 1. Do the tests pass?
 2. Implement a simple cache for the `Fetcher`
 3. Enhance the Cache requirements.
-   1. Add a FIFO (First in First Out) caching strategy for you `FetcherCache`
+   1. Add a FIFO (First In, First Out) caching strategy for you `FetcherCache`
       1. Using a sizing strategy to manage cache size
       2. Use an expiry time to manage the cache
