@@ -20,9 +20,4 @@ This project uses Gradle, if you are not familar with this build tool, do not wo
 
 ## Questions
 
-1. Do the tests pass?
-2. Implement a simple cache for the `Fetcher`
-3. Enhance the Cache requirements.
-   1. Add a FIFO (First In, First Out) caching strategy for you `FetcherCache`
-      1. Using a sizing strategy to manage cache size
-      2. Use an expiry time to manage the cache
+Provided during the interview.
